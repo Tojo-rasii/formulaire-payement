@@ -1,0 +1,64 @@
+@media only screen and (max-width:1050px) {
+    body {
+        font-size: calc(0.5em + 0.5em);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column !important;
+        width: 100%;
+        max-width: 95%;
+    }
+
+    #Description {
+        width: 95%;
+        max-width: max-content;
+    }
+
+    main section:nth-child(1) article {
+        margin-top: 1.5em;
+    }
+
+    #Title {
+        font-size: 2em;
+    }
+
+    #propy {
+        font-size: 1.2em;
+    }
+
+    #icon {
+        margin-bottom: 2.5em;
+    }
+
+    main section:nth-child(2) {
+        padding-top: 1.5em !important;
+    }
+
+    main section:nth-child(2) article:nth-child(2) form input {
+        width: 60vw;
+    }
+
+    main section:nth-child(2) article:nth-child(2) form input[type='submit'] {
+        width: 65vw !important;
+        max-width: 100% !important;
+    }
+
+    .PopUp {
+        position: fixed;
+        z-index: 99999;
+        padding: 1em;
+        font-size: 1.1em;
+    }
+
+    .popArticle {
+        width: 99%;
+        max-width: max-content;
+        margin: auto;
+        text-align: center;
+    }
+
+    .popArticle article:nth-child(2) {
+        width: 100%;
+    }
+}
