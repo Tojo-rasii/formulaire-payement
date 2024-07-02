@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
     const currentDay = currentDate.toLocaleDateString('fr-FR', dayWeek);
     const currentYear = currentDate.toLocaleDateString('fr-FR', dateYear);
     const date = currentYear;
-    const url = process.env.DATABASE_URL;
+    const url = 'https://formulaire-payement-back.onrender.com';
     // const url = 'http://localhost:3000'
 
 
