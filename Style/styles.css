@@ -330,7 +330,6 @@ main section:nth-child(2) article:nth-child(2) form input[type='submit']:hover {
 #prixDuToto{
     font-weight: 600;
     margin-inline-start: 0.5em;
-    letter-spacing: 0.2em;
 }
 
 .bi-x{

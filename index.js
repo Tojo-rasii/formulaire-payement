@@ -17,6 +17,17 @@ form.addEventListener('submit', (e) => {
     const currentDay = currentDate.toLocaleDateString('fr-FR', dayWeek);
     const currentYear = currentDate.toLocaleDateString('fr-FR', dateYear);
     const date = currentYear;
+    const url = 'https://formulaire-payement-back.onrender.com'
+    // const url = 'http://localhost:3000'
+
+
+    // Fonction pour formater les nombres avec des points de séparation
+    const formatNumber = (number) => {
+        return Number(number).toLocaleString('fr-FR', { minimumFractionDigits: 0 });
+    };
+
+    const formattedPayement = formatNumber(payement);
+
 
     const person = {
         username: username,
@@ -26,27 +37,29 @@ form.addEventListener('submit', (e) => {
         date: date
     };
 
-    fetch('http://localhost:3000/save', {
+
+
+    fetch(`${url}/save`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(person)
+           body: JSON.stringify(person)
     })
-    .then(response => response.text())
-    .then(data => {
-        console.log(data);
+        .then(response => response.text())
+        .then(data => {
+            console.log(data);
 
-        pop.classList.add('d-block');
+            pop.classList.add('d-block');
 
-        nomDuPerson.textContent = username;
-        prixDuToto.textContent = payement;
+            nomDuPerson.textContent = username;
+            prixDuToto.textContent = formattedPayement;
 
-        form.reset();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+            form.reset();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 });
 
 close.addEventListener('click', () => {
