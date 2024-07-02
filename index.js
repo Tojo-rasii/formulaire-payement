@@ -39,7 +39,7 @@ form.addEventListener('submit', (e) => {
 
 
 
-    fetch(`${url}/purchase`, {
+    fetch(`${url}/purchases`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
